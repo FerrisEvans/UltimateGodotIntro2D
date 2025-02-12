@@ -1,6 +1,6 @@
 .vscode/
 .idea/
-.DS_Store/
+.DS_Store
 # Godot 4+ specific ignores
 .godot/
 /android/
@@ -17,3 +17,6 @@ export-presets.cfg
 .mono/
 data_*/
 mono_crash.*.json
+
+# Export
+*.exe

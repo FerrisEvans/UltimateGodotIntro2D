@@ -94,3 +94,11 @@ We essentially multiply any movement with the delta time.
 | 10px | 120 | 1 / 120 = 0.008 | 10 * 120 = 1200 | 10 * 120 * 0.008 = 10 |
 
 With delta accounted, the game runs at the same speed at any framerate!
+
+# 3. Input
+
+Create an input map. This looks for possible inputs and makes them accessible in the game. For example, we can get the left key and the 'A' key and store them both under 'left' in the input map.
+
+```gdscript
+var pressed: bool = Input.is_action_pressed("left")
+```

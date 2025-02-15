@@ -1,24 +1,31 @@
 extends CharacterBody2D
 
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+var can_laser: bool = true
+var can_grenade: bool = true
 
-
-func _physics_process(delta: float) -> void:
-	# Add the gravity.
-	if not is_on_floor():
-		velocity += get_gravity() * delta
-
-	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
-
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction := Input.get_axis("ui_left", "ui_right")
-	if direction:
-		velocity.x = direction * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-
+func _process(_delta: float) -> void:
+	# input
+	var direction = Input.get_vector("left", "right", "up", "down")
+	velocity = direction * 500
 	move_and_slide()
+	
+	# laser shooting input
+	if can_laser && Input.is_action_pressed("primary action"):
+		print("shoot laser")
+		can_laser = false
+		$LaserReloadTimer.start()
+
+	if can_grenade and Input.is_action_pressed("secondary action"):
+		print("shoot grenade")
+		can_grenade = false
+		$GrenadeReloadTimer.start(0.5)
+
+func _on_timer_timeout() -> void:
+	if not can_laser:
+		can_laser = true
+		print("can laser")
+
+func _on_grenade_reload_timer_timeout() -> void:
+	if not can_grenade:
+		can_grenade = true
+		print("can grenade")

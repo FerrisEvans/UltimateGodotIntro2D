@@ -1,23 +1,31 @@
-[gd_scene load_steps=6 format=3 uid="uid://c6t0omnmjxyx5"]
+[gd_scene load_steps=7 format=3 uid="uid://c6t0omnmjxyx5"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_dh2pu"]
 [ext_resource type="PackedScene" uid="uid://cjvomd6vatqsp" path="res://scenes/players/player.tscn" id="1_iout5"]
 [ext_resource type="PackedScene" uid="uid://c3cqmr6hvh7lp" path="res://scenes/enemies/drone.tscn" id="2_8l6md"]
+[ext_resource type="Texture2D" uid="uid://cwqiujgb5tpp0" path="res://graphics/objects/gate.png" id="2_k2hdp"]
 [ext_resource type="PackedScene" uid="uid://cepq624yqu4a8" path="res://scenes/objects/bed.tscn" id="2_n46fa"]
 [ext_resource type="PackedScene" uid="uid://b0hmuxe06amol" path="res://scenes/objects/billboard.tscn" id="4_5t6b6"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_dh2pu")
 
+[node name="Gate" type="Sprite2D" parent="."]
+position = Vector2(525, -558)
+texture = ExtResource("2_k2hdp")
+
 [node name="Drone" parent="." instance=ExtResource("2_8l6md")]
+visible = false
 position = Vector2(254, 247)
 
 [node name="Bed" parent="." instance=ExtResource("2_n46fa")]
+visible = false
 position = Vector2(678, -54)
 
 [node name="Player" parent="." instance=ExtResource("1_iout5")]
-position = Vector2(616, 448)
+position = Vector2(607, 559)
 
 [node name="Billboard" parent="." instance=ExtResource("4_5t6b6")]
+visible = false
 position = Vector2(190, 555)
 rotation = 0.506145

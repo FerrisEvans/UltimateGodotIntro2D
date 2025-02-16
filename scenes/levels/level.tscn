@@ -59,7 +59,7 @@ script = ExtResource("1_dh2pu")
 texture_repeat = 2
 texture = ExtResource("2_m8wtd")
 region_enabled = true
-region_rect = Rect2(0, 0, 9532.38, 5365.53)
+region_rect = Rect2(0, 0, 16000, 10000)
 
 [node name="Decoration" type="Sprite2D" parent="Ground"]
 self_modulate = Color(0.972549, 0.85098, 0.572549, 0.643137)

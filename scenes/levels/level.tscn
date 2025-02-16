@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://c6t0omnmjxyx5"]
+[gd_scene load_steps=17 format=4 uid="uid://c6t0omnmjxyx5"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_dh2pu"]
 [ext_resource type="PackedScene" uid="uid://cjvomd6vatqsp" path="res://scenes/players/player.tscn" id="1_iout5"]
@@ -10,6 +10,45 @@
 [ext_resource type="PackedScene" uid="uid://dkseeupo2kobc" path="res://scenes/objects/gate.tscn" id="6_d5ec7"]
 [ext_resource type="Texture2D" uid="uid://d1t2pnbbb3n27" path="res://graphics/decals/moss/moss_4.png" id="7_l1v6t"]
 [ext_resource type="Texture2D" uid="uid://c3a2eiudnmq4b" path="res://graphics/decals/moss/moss_5.png" id="8_aqhes"]
+[ext_resource type="Texture2D" uid="uid://bmfcn1n4o3k8i" path="res://graphics/tilesets/outside_walls.png" id="9_jhsya"]
+[ext_resource type="Texture2D" uid="uid://c5k4kcf1sh4yp" path="res://graphics/tilesets/soil.png" id="10_y2r4m"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0o8au"]
+resource_name = "soil"
+texture = ExtResource("10_y2r4m")
+texture_region_size = Vector2i(390, 390)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_7tq4i"]
+tile_size = Vector2i(390, 390)
+sources/0 = SubResource("TileSetAtlasSource_0o8au")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pmo2c"]
+resource_name = "walls"
+texture = ExtResource("9_jhsya")
+texture_region_size = Vector2i(390, 390)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+0:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_22oqt"]
+tile_size = Vector2i(390, 390)
+sources/0 = SubResource("TileSetAtlasSource_pmo2c")
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_dh2pu")
@@ -47,8 +86,16 @@ texture = ExtResource("7_l1v6t")
 position = Vector2(1329, 1153)
 texture = ExtResource("8_aqhes")
 
+[node name="SoilLayer" type="TileMapLayer" parent="Ground"]
+tile_map_data = PackedByteArray("AAAHAP3/AAAAAAAAAAAIAP3/AAABAAAAAAAJAP3/AAACAAAAAAAHAP7/AAAAAAEAAAAIAP7/AAABAAEAAAAJAP7/AAACAAEAAAAHAP//AAAAAAIAAAAIAP//AAABAAIAAAAJAP//AAACAAIAAAA=")
+tile_set = SubResource("TileSet_7tq4i")
+
+[node name="WallLayer" type="TileMapLayer" parent="Ground"]
+tile_map_data = PackedByteArray("AAD9////AAACAAAAAAD8////AAABAAAAAAD7////AAABAAAAAAD6////AAABAAAAAAD5////AAABAAAAAAD4////AAABAAAAAAD3////AAABAAAAAAD2////AAABAAAAAAD1////AAABAAAAAAD0////AAABAAAAAADz////AAAAAAAAAAAFAP//AAAAAAAAAAAGAP//AAACAAIAAAAGAP7/AAAAAAIAAAAGAP3/AAABAAEAAAAHAP3/AAABAAAAAAAIAP3/AAABAAAAAAAJAP3/AAACAAIAAAAJAPz/AAAAAAIAAAAJAPv/AAAAAAIAAAAJAPr/AAAAAAIAAAAJAPn/AAABAAEAAAAKAPn/AAABAAAAAAALAPn/AAABAAAAAAAMAPn/AAACAAEAAAAMAPr/AAAAAAIAAAAMAPv/AAAAAAIAAAAMAPz/AAAAAAIAAAAMAP3/AAAAAAIAAAAMAP7/AAAAAAIAAAAMAP//AAACAAIAAAALAP//AAABAAAAAAAKAP//AAABAAAAAAAJAP//AAABAAEAAAAJAAAAAAAAAAMAAAA=")
+tile_set = SubResource("TileSet_22oqt")
+
 [node name="Gate" parent="." instance=ExtResource("6_d5ec7")]
-position = Vector2(541, -480)
+position = Vector2(526, -433)
 
 [node name="Player" parent="." instance=ExtResource("1_iout5")]
 position = Vector2(607, 559)

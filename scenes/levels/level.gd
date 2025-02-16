@@ -11,7 +11,7 @@ func _on_player_laser(pos, direction: Vector2) -> void:
 	# 1. update the laser position
 	laser.position = pos
 	laser.direction = direction
-	laser.rotate(direction.angle())
+	laser.rotation_degrees = rad_to_deg(direction.angle())
 	
 	# 2. we have to move the laser
 	# 3. add the laser instance to a Node2D

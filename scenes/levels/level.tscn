@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://c6t0omnmjxyx5"]
+[gd_scene load_steps=18 format=4 uid="uid://c6t0omnmjxyx5"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_dh2pu"]
 [ext_resource type="PackedScene" uid="uid://cjvomd6vatqsp" path="res://scenes/players/player.tscn" id="1_iout5"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://c3a2eiudnmq4b" path="res://graphics/decals/moss/moss_5.png" id="8_aqhes"]
 [ext_resource type="Texture2D" uid="uid://bmfcn1n4o3k8i" path="res://graphics/tilesets/outside_walls.png" id="9_jhsya"]
 [ext_resource type="Texture2D" uid="uid://c5k4kcf1sh4yp" path="res://graphics/tilesets/soil.png" id="10_y2r4m"]
+[ext_resource type="PackedScene" uid="uid://ba0q50c5kb4j5" path="res://scenes/houses/house.tscn" id="13_edhe2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0o8au"]
 resource_name = "soil"
@@ -93,6 +94,10 @@ tile_set = SubResource("TileSet_7tq4i")
 [node name="WallLayer" type="TileMapLayer" parent="Ground"]
 tile_map_data = PackedByteArray("AAD9////AAACAAAAAAD8////AAABAAAAAAD7////AAABAAAAAAD6////AAABAAAAAAD5////AAABAAAAAAD4////AAABAAAAAAD3////AAABAAAAAAD2////AAABAAAAAAD1////AAABAAAAAAD0////AAABAAAAAADz////AAAAAAAAAAAFAP//AAAAAAAAAAAGAP//AAACAAIAAAAGAP7/AAAAAAIAAAAGAP3/AAABAAEAAAAHAP3/AAABAAAAAAAIAP3/AAABAAAAAAAJAP3/AAACAAIAAAAJAPz/AAAAAAIAAAAJAPv/AAAAAAIAAAAJAPr/AAAAAAIAAAAJAPn/AAABAAEAAAAKAPn/AAABAAAAAAALAPn/AAABAAAAAAAMAPn/AAACAAEAAAAMAPr/AAAAAAIAAAAMAPv/AAAAAAIAAAAMAPz/AAAAAAIAAAAMAP3/AAAAAAIAAAAMAP7/AAAAAAIAAAAMAP//AAACAAIAAAALAP//AAABAAAAAAAKAP//AAABAAAAAAAJAP//AAABAAEAAAAJAAAAAAAAAAMAAAA=")
 tile_set = SubResource("TileSet_22oqt")
+
+[node name="House" parent="Ground" instance=ExtResource("13_edhe2")]
+position = Vector2(-5098, 2384)
+rotation = -2.56389
 
 [node name="Gate" parent="." instance=ExtResource("6_d5ec7")]
 position = Vector2(526, -433)

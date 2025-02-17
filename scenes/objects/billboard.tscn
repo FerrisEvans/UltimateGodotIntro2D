@@ -6,6 +6,8 @@
 size = Vector2(1228, 110)
 
 [node name="Billboard" type="StaticBody2D"]
+collision_layer = 4
+collision_mask = 11
 
 [node name="Billboard" type="Sprite2D" parent="."]
 texture = ExtResource("1_5k0yw")

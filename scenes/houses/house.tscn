@@ -166,6 +166,7 @@ tile_size = Vector2i(390, 390)
 sources/0 = SubResource("TileSetAtlasSource_rsmoc")
 
 [node name="House" type="Area2D"]
+collision_layer = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_r7ju5")

@@ -15,9 +15,8 @@ gradient = SubResource("Gradient_a6iwu")
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_cuwr1"]
 particle_flag_disable_z = true
 emission_shape = 1
-emission_sphere_radius = 50.0
-gravity = Vector3(50, -45, 0)
-scale_min = 0.5
+emission_sphere_radius = 60.0
+gravity = Vector3(100, -150, 0)
 scale_max = 3.0
 color = Color(0.94902, 0.94902, 0.94902, 0.384314)
 color_ramp = SubResource("GradientTexture1D_bue37")
@@ -31,6 +30,7 @@ shape = SubResource("CircleShape2D_7n2sh")
 texture = ExtResource("1_qg3sg")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
-amount = 100
+amount = 200
 process_material = SubResource("ParticleProcessMaterial_cuwr1")
 texture = ExtResource("2_vdhen")
+lifetime = 1.5

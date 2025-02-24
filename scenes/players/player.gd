@@ -30,6 +30,7 @@ func _process(_delta: float) -> void:
 		var laser_markers = $LaserStartPositions.get_children()
 		var selected_laser = laser_markers[randi() % laser_markers.size()]
 		laser.emit(selected_laser.global_position, player_direction)
+		$GPUParticles2D.emitting = true
 		can_laser = false
 		$LaserReloadTimer.start()
 

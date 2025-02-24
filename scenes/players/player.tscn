@@ -1,10 +1,28 @@
-[gd_scene load_steps=4 format=3 uid="uid://cjvomd6vatqsp"]
+[gd_scene load_steps=8 format=3 uid="uid://cjvomd6vatqsp"]
 
 [ext_resource type="Script" path="res://scenes/players/player.gd" id="1_rprxg"]
 [ext_resource type="Texture2D" uid="uid://c7j8mr831v1ov" path="res://graphics/player/player.png" id="2_mpm30"]
+[ext_resource type="Texture2D" uid="uid://dy5clbhuo88ds" path="res://graphics/decals/white.png" id="3_mebs7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ms8vv"]
 radius = 63.0
+
+[sub_resource type="Gradient" id="Gradient_xymb8"]
+colors = PackedColorArray(0.117647, 1, 1, 0.72549, 0.541176, 1, 1, 0.156863)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_vwqxm"]
+gradient = SubResource("Gradient_xymb8")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_48nku"]
+particle_flag_disable_z = true
+spread = 15.0
+initial_velocity_min = 1200.0
+initial_velocity_max = 1500.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.3
+scale_max = 0.5
+color = Color(0.317647, 0.894118, 1, 0.596078)
+color_ramp = SubResource("GradientTexture1D_vwqxm")
 
 [node name="Player" type="CharacterBody2D"]
 collision_mask = 31
@@ -51,6 +69,14 @@ position = Vector2(123, 29)
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.6, 0.6)
 position_smoothing_enabled = true
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+position = Vector2(128, 15)
+emitting = false
+process_material = SubResource("ParticleProcessMaterial_48nku")
+texture = ExtResource("3_mebs7")
+lifetime = 0.2
+one_shot = true
 
 [connection signal="timeout" from="LaserReloadTimer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="GrenadeReloadTimer" to="." method="_on_grenade_reload_timer_timeout"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=19 format=4 uid="uid://c6t0omnmjxyx5"]
 
-[ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_dh2pu"]
+[ext_resource type="Script" uid="uid://d2s8vm1lly5hj" path="res://scenes/levels/level.gd" id="1_dh2pu"]
 [ext_resource type="PackedScene" uid="uid://cjvomd6vatqsp" path="res://scenes/players/player.tscn" id="1_iout5"]
 [ext_resource type="Texture2D" uid="uid://ccwot1ulwlpe3" path="res://graphics/ground/stones.png" id="2_m8wtd"]
 [ext_resource type="Texture2D" uid="uid://bm4fxb7y0xme1" path="res://graphics/decals/dirt_patch.png" id="3_fes00"]

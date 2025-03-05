@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://382rdxf3kjml"]
 
 [ext_resource type="Texture2D" uid="uid://dpnxyxn503itg" path="res://graphics/projectiles/grenade.png" id="1_d1pd3"]
-[ext_resource type="Script" path="res://scenes/projectiles/grenade.gd" id="1_oeo3l"]
+[ext_resource type="Script" uid="uid://lspxqkuymjav" path="res://scenes/projectiles/grenade.gd" id="1_oeo3l"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_fmd7s"]
 bounce = 0.4

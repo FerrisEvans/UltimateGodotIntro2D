@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://c3cqmr6hvh7lp"]
 
 [ext_resource type="Texture2D" uid="uid://danhuca3ti1pb" path="res://graphics/enemies/drone.png" id="1_sxohh"]
-[ext_resource type="Script" path="res://scenes/enemies/drone.gd" id="1_tfmg8"]
+[ext_resource type="Script" uid="uid://2bwi1b6c51su" path="res://scenes/enemies/drone.gd" id="1_tfmg8"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_epjhu"]
 radius = 62.0

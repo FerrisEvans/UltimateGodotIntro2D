@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=3 uid="uid://dcmdynpoun1vm"]
+[gd_scene load_steps=51 format=3 uid="uid://dcmdynpoun1vm"]
 
 [ext_resource type="Texture2D" uid="uid://0y1h6rol0v5m" path="res://graphics/lights/fan_animation/00000.png" id="1_eegve"]
 [ext_resource type="Texture2D" uid="uid://b651h83bmisti" path="res://graphics/lights/fan_animation/00001.png" id="2_wgpv3"]
@@ -48,6 +48,7 @@
 [ext_resource type="Texture2D" uid="uid://f6idqfg5klx7" path="res://graphics/lights/fan_animation/00045.png" id="46_16i4b"]
 [ext_resource type="Texture2D" uid="uid://c55v7j2dgppf1" path="res://graphics/lights/fan_animation/00046.png" id="47_lvt43"]
 [ext_resource type="Texture2D" uid="uid://buiavn70ko6lw" path="res://graphics/lights/fan_animation/00047.png" id="48_wpeb1"]
+[ext_resource type="Texture2D" uid="uid://b31r0e3kwtqae" path="res://graphics/lights/textures/circle.png" id="49_wgpv3"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ehhcu"]
 animations = [{
@@ -203,3 +204,7 @@ animations = [{
 
 [node name="LightFanAnimation" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_ehhcu")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+energy = 1.5
+texture = ExtResource("49_wgpv3")

@@ -6,6 +6,9 @@ signal grenade(pos, direction)
 var can_laser: bool = true
 var can_grenade: bool = true
 
+@export var max_speed: int = 500
+var speed = max_speed
+
 func _on_timer_timeout() -> void:
 	if not can_laser:
 		can_laser = true
@@ -17,7 +20,7 @@ func _on_grenade_reload_timer_timeout() -> void:
 func _process(_delta: float) -> void:
 	# input
 	var direction = Input.get_vector("left", "right", "up", "down")
-	velocity = direction * 500
+	velocity = direction * speed
 	move_and_slide()
 	
 	# rotate player

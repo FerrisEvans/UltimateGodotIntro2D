@@ -1,4 +1,10 @@
 extends Area2D
 
-func _on_body_entered(body: Node2D) -> void:
-	print(body)
+signal player_entered
+signal player_left
+
+func _on_body_entered(_body: Node2D) -> void:
+	emit_signal('player_entered')
+
+func _on_body_exited(_body: Node2D) -> void:
+	emit_signal('player_left')

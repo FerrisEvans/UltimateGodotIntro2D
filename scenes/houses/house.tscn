@@ -261,3 +261,4 @@ rotation = 3.14159
 position = Vector2(1574, -1226)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

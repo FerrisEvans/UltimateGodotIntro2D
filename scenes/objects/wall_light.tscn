@@ -12,7 +12,7 @@ polygon = PackedVector2Array(210, -6, 211, 48, 223, 44, 226, 37, 227, 1, 220, -7
 
 [node name="WallLight" type="StaticBody2D"]
 collision_layer = 4
-collision_mask = 3
+collision_mask = 11
 
 [node name="WallLamp" type="Sprite2D" parent="."]
 texture = ExtResource("1_yt0oi")

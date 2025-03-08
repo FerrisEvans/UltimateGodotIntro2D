@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://uftxc4xske2j"]
+[gd_scene load_steps=22 format=4 uid="uid://uftxc4xske2j"]
 
 [ext_resource type="PackedScene" uid="uid://c6t0omnmjxyx5" path="res://scenes/levels/level.tscn" id="1_2s4ok"]
 [ext_resource type="Script" uid="uid://nlk8f1p882gg" path="res://scenes/levels/outside.gd" id="2_ex6t8"]
@@ -15,6 +15,8 @@
 [ext_resource type="PackedScene" uid="uid://ba0q50c5kb4j5" path="res://scenes/houses/house.tscn" id="11_oe17f"]
 [ext_resource type="PackedScene" uid="uid://xdb1lxd4yv1d" path="res://scenes/objects/steam_vent.tscn" id="12_lbwx5"]
 [ext_resource type="PackedScene" uid="uid://dcmdynpoun1vm" path="res://scenes/objects/light_fan_animation.tscn" id="13_ddemh"]
+[ext_resource type="PackedScene" uid="uid://df3f68a2e057h" path="res://scenes/objects/box.tscn" id="16_uaeil"]
+[ext_resource type="PackedScene" uid="uid://b16sh5w3dby58" path="res://scenes/objects/toilet.tscn" id="17_bjulg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vkmey"]
 resource_name = "soil"
@@ -108,5 +110,15 @@ autoplay = "default"
 
 [node name="Gate" parent="." index="1" instance=ExtResource("2_x73sx")]
 position = Vector2(520, -848)
+
+[node name="Box" parent="." index="4" instance=ExtResource("16_uaeil")]
+position = Vector2(373, 290)
+collision_layer = 1
+collision_mask = 1
+
+[node name="Toilet" parent="." index="5" instance=ExtResource("17_bjulg")]
+position = Vector2(856, 288)
+collision_layer = 1
+collision_mask = 1
 
 [connection signal="player_entered_gate" from="Gate" to="." method="_on_gate_player_entered_gate"]

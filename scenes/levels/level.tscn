@@ -8,10 +8,10 @@ script = ExtResource("1_dh2pu")
 
 [node name="Ground" type="Node2D" parent="."]
 
+[node name="Projectiles" type="Node2D" parent="."]
+
 [node name="Player" parent="." instance=ExtResource("1_iout5")]
 position = Vector2(607, 559)
-
-[node name="Projectiles" type="Node2D" parent="."]
 
 [connection signal="grenade" from="Player" to="." method="_on_player_grenade"]
 [connection signal="laser" from="Player" to="." method="_on_player_laser"]

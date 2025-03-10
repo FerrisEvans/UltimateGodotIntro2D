@@ -1,10 +1,11 @@
-[gd_scene load_steps=15 format=4 uid="uid://ddxliywfl8lwf"]
+[gd_scene load_steps=16 format=4 uid="uid://ddxliywfl8lwf"]
 
 [ext_resource type="PackedScene" uid="uid://c6t0omnmjxyx5" path="res://scenes/levels/level.tscn" id="1_8ht0b"]
 [ext_resource type="Script" uid="uid://do0ntuf3tskyq" path="res://scenes/levels/inside.gd" id="2_4iit3"]
 [ext_resource type="Texture2D" uid="uid://cwleh5uqdwdam" path="res://graphics/ground/dirt.png" id="2_j5d1l"]
 [ext_resource type="TileSet" uid="uid://cmtp3e0t7w1w5" path="res://scenes/tilesets/floor.tres" id="2_xanyd"]
 [ext_resource type="TileSet" uid="uid://sm862lopvn0j" path="res://scenes/tilesets/inner_walls.tres" id="3_j5d1l"]
+[ext_resource type="PackedScene" uid="uid://uftxc4xske2j" path="res://scenes/levels/outside.tscn" id="3_jfm54"]
 [ext_resource type="TileSet" uid="uid://cr8io3q8ksjwk" path="res://scenes/tilesets/outer_walls.tres" id="4_6serm"]
 [ext_resource type="PackedScene" uid="uid://bhsxxpl4r0x7p" path="res://scenes/objects/wall_light.tscn" id="5_x0st6"]
 [ext_resource type="PackedScene" uid="uid://reu5qe5u0aj5" path="res://scenes/objects/simple_light.tscn" id="6_0kuad"]
@@ -19,6 +20,7 @@ size = Vector2(834, 159.188)
 
 [node name="Inside" instance=ExtResource("1_8ht0b")]
 script = ExtResource("2_4iit3")
+outside_level_scene = ExtResource("3_jfm54")
 
 [node name="Dirt" type="Sprite2D" parent="Ground" index="0"]
 texture_repeat = 2

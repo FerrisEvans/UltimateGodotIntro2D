@@ -107,6 +107,9 @@ position = Vector2(-95, 511)
 [node name="Gate" parent="." index="1" instance=ExtResource("2_x73sx")]
 position = Vector2(520, -848)
 
+[node name="Player" parent="." index="3"]
+position = Vector2(598, 83)
+
 [node name="Box" parent="." index="4" instance=ExtResource("16_uaeil")]
 position = Vector2(373, 290)
 collision_layer = 1

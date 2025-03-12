@@ -15,6 +15,11 @@ func _ready() -> void:
 	laser_icon.modulate = green
 	grenade_label.modulate = green
 	grenade_icon.modulate = green
+	
+	var health_bar: TextureProgressBar = $MarginContainer/TextureProgressBar
+	health_bar.max_value = Globals.health
+	health_bar.value = Globals.health
+	
 
 func update_laser_text():
 	laser_label.text = str(Globals.laser_amount)

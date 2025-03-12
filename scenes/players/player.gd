@@ -17,6 +17,14 @@ func _on_grenade_reload_timer_timeout() -> void:
 	if not can_grenade:
 		can_grenade = true
 
+func add_item(type: String) -> void:
+	if type == 'laser':
+		Globals.laser_amount += 5
+	if type == 'grenade':
+		Globals.grenade_amount += 1
+	if type == 'health':
+		Globals.health += 20
+
 func _process(_delta: float) -> void:
 	# input
 	var direction = Input.get_vector("left", "right", "up", "down")

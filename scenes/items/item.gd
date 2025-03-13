@@ -5,7 +5,7 @@ var available_options: Array[String] = ['laser', 'grenade', 'health']
 var type = available_options[randi() % len(available_options)]
 
 var direction: Vector2
-var distance: int = randi_range(150, 250)
+var distance: int = randi_range(200, 400)
 
 func _ready() -> void:	
 	var color: Color = Color(1, 1, 1)
@@ -18,8 +18,11 @@ func _ready() -> void:
 	$Orb2.modulate = color
 	# tween
 	var target_pos = position + direction * distance
-	var movement_tween = create_tween()
-	movement_tween.tween_property(self, 'position', target_pos, 0.5)
+	var tween = create_tween()
+	tween.set_parallel()
+	tween.tween_property(self, 'position', target_pos, 0.5)
+	tween.tween_property(self, 'scale', Vector2(1, 1), 0.3).from(Vector2(0, 0))
+
 
 
 func _process(delta: float) -> void:

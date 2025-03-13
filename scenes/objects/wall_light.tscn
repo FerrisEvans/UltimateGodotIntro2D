@@ -33,6 +33,5 @@ shadow_filter_smooth = 1.9
 texture = ExtResource("2_3ouo7")
 texture_scale = 2.0
 
-[node name="LightOccluder2D2" type="LightOccluder2D" parent="."]
-scale = Vector2(-1, 1)
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
 occluder = SubResource("OccluderPolygon2D_i0hyj")

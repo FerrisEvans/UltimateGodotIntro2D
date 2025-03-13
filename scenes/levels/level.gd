@@ -3,6 +3,7 @@ class_name LevelParent
 
 var laser_scene: PackedScene = preload("res://scenes/projectiles/laser.tscn")
 var grenade_scene: PackedScene = preload("res://scenes/projectiles/grenade.tscn")
+var item_scene: PackedScene = preload('res://scenes/items/item.tscn')
 
 func _on_player_laser(pos, direction: Vector2) -> void:
 	var laser = laser_scene.instantiate() as Area2D
@@ -33,3 +34,14 @@ func _on_house_player_entered() -> void:
 func _on_house_player_left() -> void:
 	var tween = get_tree().create_tween()
 	tween.tween_property($Player/Camera2D, 'zoom', Vector2(0.6, 0.6), 1)
+
+func _on_container_open(pos, direction):
+	var item = item_scene.instantiate()
+	item.position = pos
+	item.direction = direction
+	$Items.call_deferred('add_child', item)
+
+
+func _ready() -> void:
+	for container in get_tree().get_nodes_in_group('Container'):
+		container.connect('open', _on_container_open)

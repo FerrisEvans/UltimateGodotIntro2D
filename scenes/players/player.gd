@@ -32,7 +32,6 @@ func _process(_delta: float) -> void:
 	# laser shooting input
 	if can_laser && Globals.laser_amount > 0 && Input.is_action_pressed("primary action"):
 		Globals.laser_amount -= 1
-				
 		var laser_markers = $LaserStartPositions.get_children()
 		var selected_laser = laser_markers[randi() % laser_markers.size()]
 		laser.emit(selected_laser.global_position, player_direction)
@@ -47,6 +46,5 @@ func _process(_delta: float) -> void:
 		var selected_grenade = grenade_markers[randi() % grenade_markers.size()]
 
 		grenade.emit(selected_grenade.global_position, player_direction)
-
 		can_grenade = false
 		$GrenadeReloadTimer.start()

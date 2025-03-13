@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://uftxc4xske2j"]
+[gd_scene load_steps=22 format=4 uid="uid://uftxc4xske2j"]
 
 [ext_resource type="PackedScene" uid="uid://c6t0omnmjxyx5" path="res://scenes/levels/level.tscn" id="1_2s4ok"]
 [ext_resource type="Script" uid="uid://nlk8f1p882gg" path="res://scenes/levels/outside.gd" id="2_ex6t8"]
@@ -17,7 +17,6 @@
 [ext_resource type="PackedScene" uid="uid://dcmdynpoun1vm" path="res://scenes/objects/light_fan_animation.tscn" id="13_ddemh"]
 [ext_resource type="PackedScene" uid="uid://df3f68a2e057h" path="res://scenes/objects/box.tscn" id="16_uaeil"]
 [ext_resource type="PackedScene" uid="uid://b16sh5w3dby58" path="res://scenes/objects/toilet.tscn" id="17_bjulg"]
-[ext_resource type="PackedScene" uid="uid://bibd2jx6t60ty" path="res://scenes/items/item.tscn" id="18_bjulg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vkmey"]
 resource_name = "soil"
@@ -108,33 +107,17 @@ position = Vector2(-95, 511)
 [node name="Gate" parent="." index="1" instance=ExtResource("2_x73sx")]
 position = Vector2(520, -848)
 
-[node name="Player" parent="." index="3"]
+[node name="Box" parent="." index="2" instance=ExtResource("16_uaeil")]
+position = Vector2(261, 645)
+
+[node name="Toilet" parent="." index="3" instance=ExtResource("17_bjulg")]
+position = Vector2(963, 615)
+
+[node name="Player" parent="." index="6"]
 position = Vector2(598, 83)
-
-[node name="Box" parent="." index="4" instance=ExtResource("16_uaeil")]
-position = Vector2(2294, 223)
-collision_layer = 1
-collision_mask = 1
-
-[node name="Toilet" parent="." index="5" instance=ExtResource("17_bjulg")]
-position = Vector2(2277, 713)
-collision_layer = 1
-collision_mask = 1
 
 [node name="LightFanAnimation" parent="Lights" index="0" instance=ExtResource("13_ddemh")]
 position = Vector2(-546, 852)
 autoplay = "default"
-
-[node name="Item" parent="." index="8" instance=ExtResource("18_bjulg")]
-position = Vector2(81, 328)
-
-[node name="Item2" parent="." index="9" instance=ExtResource("18_bjulg")]
-position = Vector2(1171, 321)
-
-[node name="Item3" parent="." index="10" instance=ExtResource("18_bjulg")]
-position = Vector2(808, 327)
-
-[node name="Item4" parent="." index="11" instance=ExtResource("18_bjulg")]
-position = Vector2(450, 318)
 
 [connection signal="player_entered_gate" from="Gate" to="." method="_on_gate_player_entered_gate"]

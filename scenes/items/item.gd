@@ -4,7 +4,10 @@ extends Area2D
 var available_options: Array[String] = ['laser', 'grenade', 'health']
 var type = available_options[randi() % len(available_options)]
 
-func _ready() -> void:
+var direction: Vector2
+var distance: int = randi_range(150, 250)
+
+func _ready() -> void:	
 	var color: Color = Color(1, 1, 1)
 	if type == 'laser':
 		color = Color(0.1, 0.2, 0.8)
@@ -13,6 +16,11 @@ func _ready() -> void:
 	if type == 'health':
 		color = Color(0.1, 0.8, 0.2)
 	$Orb2.modulate = color
+	# tween
+	var target_pos = position + direction * distance
+	var movement_tween = create_tween()
+	movement_tween.tween_property(self, 'position', target_pos, 0.5)
+
 
 func _process(delta: float) -> void:
 	rotation += rotation_speed * delta

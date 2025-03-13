@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://uftxc4xske2j"]
+[gd_scene load_steps=19 format=4 uid="uid://uftxc4xske2j"]
 
 [ext_resource type="PackedScene" uid="uid://c6t0omnmjxyx5" path="res://scenes/levels/level.tscn" id="1_2s4ok"]
 [ext_resource type="Script" uid="uid://nlk8f1p882gg" path="res://scenes/levels/outside.gd" id="2_ex6t8"]
@@ -13,10 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://c5k4kcf1sh4yp" path="res://graphics/tilesets/soil.png" id="9_cnio0"]
 [ext_resource type="Texture2D" uid="uid://bmfcn1n4o3k8i" path="res://graphics/tilesets/outside_walls.png" id="10_6u4a0"]
 [ext_resource type="PackedScene" uid="uid://ba0q50c5kb4j5" path="res://scenes/houses/house.tscn" id="11_oe17f"]
-[ext_resource type="PackedScene" uid="uid://xdb1lxd4yv1d" path="res://scenes/objects/steam_vent.tscn" id="12_lbwx5"]
 [ext_resource type="PackedScene" uid="uid://dcmdynpoun1vm" path="res://scenes/objects/light_fan_animation.tscn" id="13_ddemh"]
-[ext_resource type="PackedScene" uid="uid://df3f68a2e057h" path="res://scenes/objects/box.tscn" id="16_uaeil"]
-[ext_resource type="PackedScene" uid="uid://b16sh5w3dby58" path="res://scenes/objects/toilet.tscn" id="17_bjulg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vkmey"]
 resource_name = "soil"
@@ -57,6 +54,9 @@ sources/0 = SubResource("TileSetAtlasSource_4jce7")
 
 [node name="Outside" instance=ExtResource("1_2s4ok")]
 script = ExtResource("2_ex6t8")
+
+[node name="Gate" parent="." index="1" instance=ExtResource("2_x73sx")]
+position = Vector2(520, -848)
 
 [node name="Soil" type="Sprite2D" parent="Ground" index="0"]
 texture_repeat = 2
@@ -101,19 +101,7 @@ tile_set = SubResource("TileSet_4602a")
 position = Vector2(-5098, 2384)
 rotation = -2.56389
 
-[node name="SteamVent" parent="Ground" index="10" instance=ExtResource("12_lbwx5")]
-position = Vector2(-95, 511)
-
-[node name="Gate" parent="." index="1" instance=ExtResource("2_x73sx")]
-position = Vector2(520, -848)
-
-[node name="Box" parent="." index="2" instance=ExtResource("16_uaeil")]
-position = Vector2(261, 645)
-
-[node name="Toilet" parent="." index="3" instance=ExtResource("17_bjulg")]
-position = Vector2(963, 615)
-
-[node name="Player" parent="." index="6"]
+[node name="Player" parent="." index="5"]
 position = Vector2(598, 83)
 
 [node name="LightFanAnimation" parent="Lights" index="0" instance=ExtResource("13_ddemh")]
@@ -121,3 +109,5 @@ position = Vector2(-546, 852)
 autoplay = "default"
 
 [connection signal="player_entered_gate" from="Gate" to="." method="_on_gate_player_entered_gate"]
+[connection signal="player_entered" from="Ground/House" to="." method="_on_house_player_entered"]
+[connection signal="player_left" from="Ground/House" to="." method="_on_house_player_left"]

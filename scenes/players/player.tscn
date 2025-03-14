@@ -73,7 +73,7 @@ position = Vector2(123, 29)
 zoom = Vector2(0.6, 0.6)
 position_smoothing_enabled = true
 
-[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." groups=["Entities"]]
 position = Vector2(128, 15)
 emitting = false
 texture = ExtResource("3_mebs7")

@@ -9,7 +9,7 @@ radius = 49.0102
 [sub_resource type="CircleShape2D" id="CircleShape2D_08kc0"]
 radius = 1186.0
 
-[node name="Scout" type="CharacterBody2D" groups=["Scouts"]]
+[node name="Scout" type="CharacterBody2D" groups=["Entities", "Scouts"]]
 collision_layer = 2
 collision_mask = 11
 script = ExtResource("1_ns734")

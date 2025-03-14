@@ -17,6 +17,8 @@ func _on_grenade_reload_timer_timeout() -> void:
 	if not can_grenade:
 		can_grenade = true
 
+func hit():
+	print('damage')
 
 func _process(_delta: float) -> void:
 	# input

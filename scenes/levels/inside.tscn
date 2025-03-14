@@ -69,7 +69,151 @@ position = Vector2(-2729, 4212)
 energy = 2.5
 texture = ExtResource("6_7r4nv")
 
-[node name="Lights" parent="." index="6"]
+[node name="Objects" type="Node2D" parent="." index="7"]
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Billboard" parent="Objects" index="0" instance=ExtResource("15_fa7mw")]
+position = Vector2(3908, -3205)
+rotation = 0.659734
+
+[node name="Bed" parent="Objects" index="1" instance=ExtResource("16_ij657")]
+position = Vector2(4398, 4143)
+
+[node name="Bed2" parent="Objects" index="2" instance=ExtResource("16_ij657")]
+position = Vector2(4408, 1657)
+
+[node name="Box" parent="Objects" index="3" instance=ExtResource("17_yfnlr")]
+position = Vector2(2405, 4296)
+rotation = 3.14159
+
+[node name="Box5" parent="Objects" index="4" instance=ExtResource("17_yfnlr")]
+position = Vector2(4779, -1928)
+rotation = 3.14159
+
+[node name="Box9" parent="Objects" index="5" instance=ExtResource("17_yfnlr")]
+position = Vector2(2501, -3530)
+
+[node name="Box24" parent="Objects" index="6" instance=ExtResource("17_yfnlr")]
+position = Vector2(-3316, 802)
+
+[node name="Box25" parent="Objects" index="7" instance=ExtResource("17_yfnlr")]
+position = Vector2(-1574, 819)
+
+[node name="Box10" parent="Objects" index="8" instance=ExtResource("17_yfnlr")]
+position = Vector2(3029, -3532)
+
+[node name="Box11" parent="Objects" index="9" instance=ExtResource("17_yfnlr")]
+position = Vector2(4329, -2513)
+rotation = 1.5708
+
+[node name="Box14" parent="Objects" index="10" instance=ExtResource("17_yfnlr")]
+position = Vector2(6592, -3649)
+rotation = -1.5708
+
+[node name="Box12" parent="Objects" index="11" instance=ExtResource("17_yfnlr")]
+position = Vector2(4325, -2036)
+rotation = 1.5708
+
+[node name="Box6" parent="Objects" index="12" instance=ExtResource("17_yfnlr")]
+position = Vector2(5281, -1925)
+rotation = 3.14159
+
+[node name="Box7" parent="Objects" index="13" instance=ExtResource("17_yfnlr")]
+position = Vector2(6175, -1925)
+rotation = 3.14159
+
+[node name="Box15" parent="Objects" index="14" instance=ExtResource("17_yfnlr")]
+position = Vector2(6133, -3866)
+rotation = 3.14159
+
+[node name="Box16" parent="Objects" index="15" instance=ExtResource("17_yfnlr")]
+position = Vector2(5647, -3862)
+rotation = 3.14159
+
+[node name="Box17" parent="Objects" index="16" instance=ExtResource("17_yfnlr")]
+position = Vector2(5146, -3866)
+rotation = 3.14159
+
+[node name="Box18" parent="Objects" index="17" instance=ExtResource("17_yfnlr")]
+position = Vector2(1469, -2319)
+rotation = 3.14159
+
+[node name="Box19" parent="Objects" index="18" instance=ExtResource("17_yfnlr")]
+position = Vector2(991, -2315)
+rotation = 3.14159
+
+[node name="Box20" parent="Objects" index="19" instance=ExtResource("17_yfnlr")]
+position = Vector2(515, -2315)
+rotation = 3.14159
+
+[node name="Box21" parent="Objects" index="20" instance=ExtResource("17_yfnlr")]
+position = Vector2(29, -2315)
+rotation = 3.14159
+
+[node name="Box22" parent="Objects" index="21" instance=ExtResource("17_yfnlr")]
+position = Vector2(-461, -2313)
+rotation = 3.14159
+
+[node name="Box23" parent="Objects" index="22" instance=ExtResource("17_yfnlr")]
+position = Vector2(-951, -2304)
+rotation = 3.14159
+
+[node name="Box13" parent="Objects" index="23" instance=ExtResource("17_yfnlr")]
+position = Vector2(7020, -1896)
+rotation = 3.14159
+
+[node name="Box8" parent="Objects" index="24" instance=ExtResource("17_yfnlr")]
+position = Vector2(5742, -1925)
+rotation = 3.14159
+
+[node name="Box2" parent="Objects" index="25" instance=ExtResource("17_yfnlr")]
+position = Vector2(2874, 4294)
+rotation = 3.14159
+
+[node name="Box3" parent="Objects" index="26" instance=ExtResource("17_yfnlr")]
+position = Vector2(3344, 4289)
+rotation = 3.14159
+
+[node name="Box4" parent="Objects" index="27" instance=ExtResource("17_yfnlr")]
+position = Vector2(3822, 4286)
+rotation = 3.14159
+
+[node name="SteamVent" parent="Objects" index="28" instance=ExtResource("18_hbdxr")]
+position = Vector2(-3355, 323)
+
+[node name="SteamVent5" parent="Objects" index="29" instance=ExtResource("18_hbdxr")]
+position = Vector2(1862, 4115)
+
+[node name="SteamVent2" parent="Objects" index="30" instance=ExtResource("18_hbdxr")]
+position = Vector2(1844, -2362)
+
+[node name="SteamVent3" parent="Objects" index="31" instance=ExtResource("18_hbdxr")]
+position = Vector2(6648, -1917)
+
+[node name="SteamVent4" parent="Objects" index="32" instance=ExtResource("18_hbdxr")]
+position = Vector2(-3421, -4903)
+
+[node name="Toilet" parent="Objects" index="33" instance=ExtResource("19_ij657")]
+position = Vector2(2329, 1574)
+
+[node name="Toilet2" parent="Objects" index="34" instance=ExtResource("19_ij657")]
+position = Vector2(6273, -3438)
+rotation = 1.5708
+
+[node name="Toilet3" parent="Objects" index="35" instance=ExtResource("19_ij657")]
+position = Vector2(6267, -3124)
+rotation = 1.5708
+
+[node name="Toilet4" parent="Objects" index="36" instance=ExtResource("19_ij657")]
+position = Vector2(6258, -2771)
+rotation = 1.5708
+
+[node name="Toilet5" parent="Objects" index="37" instance=ExtResource("19_ij657")]
+position = Vector2(6256, -2432)
+rotation = 1.5708
+
+[node name="Lights" parent="." index="8"]
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -251,149 +395,5 @@ texture = ExtResource("12_o1nno")
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="Lights" index="44"]
 color = Color(0.517184, 0.517184, 0.517184, 1)
 blend_mode = 1
-
-[node name="Objects" type="Node2D" parent="." index="7"]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Billboard" parent="Objects" index="0" instance=ExtResource("15_fa7mw")]
-position = Vector2(3908, -3205)
-rotation = 0.659734
-
-[node name="Bed" parent="Objects" index="1" instance=ExtResource("16_ij657")]
-position = Vector2(4398, 4143)
-
-[node name="Bed2" parent="Objects" index="2" instance=ExtResource("16_ij657")]
-position = Vector2(4408, 1657)
-
-[node name="Box" parent="Objects" index="3" instance=ExtResource("17_yfnlr")]
-position = Vector2(2405, 4296)
-rotation = 3.14159
-
-[node name="Box5" parent="Objects" index="4" instance=ExtResource("17_yfnlr")]
-position = Vector2(4779, -1928)
-rotation = 3.14159
-
-[node name="Box9" parent="Objects" index="5" instance=ExtResource("17_yfnlr")]
-position = Vector2(2501, -3530)
-
-[node name="Box24" parent="Objects" index="6" instance=ExtResource("17_yfnlr")]
-position = Vector2(-3316, 802)
-
-[node name="Box25" parent="Objects" index="7" instance=ExtResource("17_yfnlr")]
-position = Vector2(-1574, 819)
-
-[node name="Box10" parent="Objects" index="8" instance=ExtResource("17_yfnlr")]
-position = Vector2(3029, -3532)
-
-[node name="Box11" parent="Objects" index="9" instance=ExtResource("17_yfnlr")]
-position = Vector2(4329, -2513)
-rotation = 1.5708
-
-[node name="Box14" parent="Objects" index="10" instance=ExtResource("17_yfnlr")]
-position = Vector2(6592, -3649)
-rotation = -1.5708
-
-[node name="Box12" parent="Objects" index="11" instance=ExtResource("17_yfnlr")]
-position = Vector2(4325, -2036)
-rotation = 1.5708
-
-[node name="Box6" parent="Objects" index="12" instance=ExtResource("17_yfnlr")]
-position = Vector2(5281, -1925)
-rotation = 3.14159
-
-[node name="Box7" parent="Objects" index="13" instance=ExtResource("17_yfnlr")]
-position = Vector2(6175, -1925)
-rotation = 3.14159
-
-[node name="Box15" parent="Objects" index="14" instance=ExtResource("17_yfnlr")]
-position = Vector2(6133, -3866)
-rotation = 3.14159
-
-[node name="Box16" parent="Objects" index="15" instance=ExtResource("17_yfnlr")]
-position = Vector2(5647, -3862)
-rotation = 3.14159
-
-[node name="Box17" parent="Objects" index="16" instance=ExtResource("17_yfnlr")]
-position = Vector2(5146, -3866)
-rotation = 3.14159
-
-[node name="Box18" parent="Objects" index="17" instance=ExtResource("17_yfnlr")]
-position = Vector2(1469, -2319)
-rotation = 3.14159
-
-[node name="Box19" parent="Objects" index="18" instance=ExtResource("17_yfnlr")]
-position = Vector2(991, -2315)
-rotation = 3.14159
-
-[node name="Box20" parent="Objects" index="19" instance=ExtResource("17_yfnlr")]
-position = Vector2(515, -2315)
-rotation = 3.14159
-
-[node name="Box21" parent="Objects" index="20" instance=ExtResource("17_yfnlr")]
-position = Vector2(29, -2315)
-rotation = 3.14159
-
-[node name="Box22" parent="Objects" index="21" instance=ExtResource("17_yfnlr")]
-position = Vector2(-461, -2313)
-rotation = 3.14159
-
-[node name="Box23" parent="Objects" index="22" instance=ExtResource("17_yfnlr")]
-position = Vector2(-951, -2304)
-rotation = 3.14159
-
-[node name="Box13" parent="Objects" index="23" instance=ExtResource("17_yfnlr")]
-position = Vector2(7020, -1896)
-rotation = 3.14159
-
-[node name="Box8" parent="Objects" index="24" instance=ExtResource("17_yfnlr")]
-position = Vector2(5742, -1925)
-rotation = 3.14159
-
-[node name="Box2" parent="Objects" index="25" instance=ExtResource("17_yfnlr")]
-position = Vector2(2874, 4294)
-rotation = 3.14159
-
-[node name="Box3" parent="Objects" index="26" instance=ExtResource("17_yfnlr")]
-position = Vector2(3344, 4289)
-rotation = 3.14159
-
-[node name="Box4" parent="Objects" index="27" instance=ExtResource("17_yfnlr")]
-position = Vector2(3822, 4286)
-rotation = 3.14159
-
-[node name="SteamVent" parent="Objects" index="28" instance=ExtResource("18_hbdxr")]
-position = Vector2(-3355, 323)
-
-[node name="SteamVent5" parent="Objects" index="29" instance=ExtResource("18_hbdxr")]
-position = Vector2(1862, 4115)
-
-[node name="SteamVent2" parent="Objects" index="30" instance=ExtResource("18_hbdxr")]
-position = Vector2(1844, -2362)
-
-[node name="SteamVent3" parent="Objects" index="31" instance=ExtResource("18_hbdxr")]
-position = Vector2(6648, -1917)
-
-[node name="SteamVent4" parent="Objects" index="32" instance=ExtResource("18_hbdxr")]
-position = Vector2(-3421, -4903)
-
-[node name="Toilet" parent="Objects" index="33" instance=ExtResource("19_ij657")]
-position = Vector2(2329, 1574)
-
-[node name="Toilet2" parent="Objects" index="34" instance=ExtResource("19_ij657")]
-position = Vector2(6273, -3438)
-rotation = 1.5708
-
-[node name="Toilet3" parent="Objects" index="35" instance=ExtResource("19_ij657")]
-position = Vector2(6267, -3124)
-rotation = 1.5708
-
-[node name="Toilet4" parent="Objects" index="36" instance=ExtResource("19_ij657")]
-position = Vector2(6258, -2771)
-rotation = 1.5708
-
-[node name="Toilet5" parent="Objects" index="37" instance=ExtResource("19_ij657")]
-position = Vector2(6256, -2432)
-rotation = 1.5708
 
 [connection signal="body_entered" from="ExitGateArea" to="." method="_on_exit_gate_area_body_entered"]

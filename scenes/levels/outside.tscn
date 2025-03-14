@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://uftxc4xske2j"]
+[gd_scene load_steps=19 format=4 uid="uid://uftxc4xske2j"]
 
 [ext_resource type="PackedScene" uid="uid://c6t0omnmjxyx5" path="res://scenes/levels/level.tscn" id="1_2s4ok"]
 [ext_resource type="Script" uid="uid://nlk8f1p882gg" path="res://scenes/levels/outside.gd" id="2_ex6t8"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://c5k4kcf1sh4yp" path="res://graphics/tilesets/soil.png" id="9_cnio0"]
 [ext_resource type="Texture2D" uid="uid://bmfcn1n4o3k8i" path="res://graphics/tilesets/outside_walls.png" id="10_6u4a0"]
 [ext_resource type="PackedScene" uid="uid://ba0q50c5kb4j5" path="res://scenes/houses/house.tscn" id="11_oe17f"]
+[ext_resource type="PackedScene" uid="uid://dsewl78y56ock" path="res://scenes/enemies/scout.tscn" id="14_xqqjy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vkmey"]
 resource_name = "soil"
@@ -130,6 +131,9 @@ position = Vector2(520, -848)
 
 [node name="Player" parent="." index="5"]
 position = Vector2(598, 83)
+
+[node name="Scout" parent="Enemies" index="0" instance=ExtResource("14_xqqjy")]
+position = Vector2(155, 368)
 
 [connection signal="player_entered" from="Ground/House" to="." method="_on_house_player_entered"]
 [connection signal="player_left" from="Ground/House" to="." method="_on_house_player_left"]

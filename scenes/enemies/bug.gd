@@ -8,7 +8,6 @@ var health = 50
 
 
 func hit() -> void:
-	print(health)
 	if not is_hit && $HitInterval.is_stopped():
 		health -= Globals.laser_dmg
 		$HitInterval.start()

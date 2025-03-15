@@ -30,12 +30,13 @@ func _on_laser_cool_down_timeout() -> void:
 
 func _on_hit_interval_timeout() -> void:
 	is_hitted = false
+	$Scout.material.set_shader_parameter('progress', 0)
 
 func hit():
 	if not is_hitted && $HitInterval.is_stopped():
 		health -= Globals.laser_dmg
 		$HitInterval.start()
 		is_hitted = true
-		print(health)
+		$Scout.material.set_shader_parameter('progress', 1)
 	if health <= 0:
 		queue_free()

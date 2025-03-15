@@ -17,6 +17,9 @@ var grenade_amount: int = 5:
 
 var health: int = 60:
 	set(value):
+		if value > health:
+			health = min(value, 100)
+			return
 		if player_vulneralbe:
 			health = value
 			player_vulneralbe = false

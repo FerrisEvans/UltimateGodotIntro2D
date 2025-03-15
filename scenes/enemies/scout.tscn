@@ -1,7 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://dsewl78y56ock"]
+[gd_scene load_steps=7 format=3 uid="uid://dsewl78y56ock"]
 
 [ext_resource type="Texture2D" uid="uid://bbh8qs7iygn8f" path="res://graphics/enemies/scout.png" id="1_i70sm"]
 [ext_resource type="Script" uid="uid://2sxk0pi1cika" path="res://scenes/enemies/scout.gd" id="1_ns734"]
+[ext_resource type="Shader" uid="uid://cgsiis5h56i7x" path="res://scenes/enemies/scout.gdshader" id="2_08kc0"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_t8bpu"]
+shader = ExtResource("2_08kc0")
+shader_parameter/color = Color(0.453939, 0.815276, 0.906435, 1)
+shader_parameter/progress = 0.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ns734"]
 radius = 49.0102
@@ -23,6 +29,7 @@ position = Vector2(101, -31)
 position = Vector2(111, 7)
 
 [node name="Scout" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_t8bpu")
 position = Vector2(17, 24)
 rotation = 1.5708
 texture = ExtResource("1_i70sm")
@@ -39,7 +46,7 @@ shape = SubResource("CircleShape2D_08kc0")
 [node name="LaserCoolDown" type="Timer" parent="."]
 
 [node name="HitInterval" type="Timer" parent="."]
-wait_time = 0.5
+wait_time = 0.2
 one_shot = true
 
 [connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]

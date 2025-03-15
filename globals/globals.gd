@@ -32,3 +32,4 @@ func player_invulnerable_timer():
 	player_vulneralbe = true
 
 var laser_dmg: int = 10
+var bug_dmg: int = 20

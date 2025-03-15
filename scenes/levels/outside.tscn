@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://uftxc4xske2j"]
+[gd_scene load_steps=29 format=4 uid="uid://uftxc4xske2j"]
 
 [ext_resource type="PackedScene" uid="uid://c6t0omnmjxyx5" path="res://scenes/levels/level.tscn" id="1_2s4ok"]
 [ext_resource type="Script" uid="uid://nlk8f1p882gg" path="res://scenes/levels/outside.gd" id="2_ex6t8"]
@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://c5k4kcf1sh4yp" path="res://graphics/tilesets/soil.png" id="9_cnio0"]
 [ext_resource type="Texture2D" uid="uid://bmfcn1n4o3k8i" path="res://graphics/tilesets/outside_walls.png" id="10_6u4a0"]
 [ext_resource type="PackedScene" uid="uid://ba0q50c5kb4j5" path="res://scenes/houses/house.tscn" id="11_oe17f"]
-[ext_resource type="PackedScene" uid="uid://dsewl78y56ock" path="res://scenes/enemies/scout.tscn" id="14_xqqjy"]
+[ext_resource type="PackedScene" uid="uid://dgqd5nsllo3mm" path="res://scenes/enemies/bug.tscn" id="14_xqqjy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vkmey"]
 resource_name = "soil"
@@ -33,23 +33,76 @@ texture_region_size = Vector2i(390, 390)
 tile_size = Vector2i(390, 390)
 sources/0 = SubResource("TileSetAtlasSource_vkmey")
 
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_xqqjy"]
+polygon = PackedVector2Array(-62.6566, -59.8342, -62.6566, 62.0921, 195, 60.9632, 195, -60.3987)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ex6t8"]
+polygon = PackedVector2Array(-59.8342, -62.6566, 62.0921, -62.6566, 60.9632, 195, -60.3987, 195)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_x30qc"]
+polygon = PackedVector2Array(58.7053, 195, -59.2697, 195, -60.9632, -195, 60.3987, -195)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_uaeil"]
+polygon = PackedVector2Array(-59.8342, 62.6566, 62.0921, 62.6566, 60.9632, -195, -60.3987, -195)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_bjulg"]
+polygon = PackedVector2Array(195, -58.7053, 195, 59.2697, -195, 60.9632, -195, -60.3987)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_gd7nx"]
+polygon = PackedVector2Array(58.7053, 195, -59.2697, 195, -60.9632, -59.8342, 195, -60.3987, 195, 58.7053, 59.8342, 57.5763)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_4lnny"]
+polygon = PackedVector2Array(58.7053, -195, -59.2697, -195, -60.9632, 59.8342, 195, 60.3987, 195, -58.7053, 59.8342, -57.5763)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_cnio0"]
+polygon = PackedVector2Array(62.6566, -59.8342, 62.6566, 62.0921, -195, 60.9632, -195, -60.3987)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_6u4a0"]
+polygon = PackedVector2Array(-58.7053, 195, 59.2697, 195, 60.9632, -59.8342, -195, -60.3987, -195, 58.7053, -59.8342, 57.5763)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_oe17f"]
+polygon = PackedVector2Array(-58.7053, -195, 59.2697, -195, 60.9632, 59.8342, -195, 60.3987, -195, -58.7053, -59.8342, -57.5763)
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4jce7"]
 resource_name = "walls"
 texture = ExtResource("10_6u4a0")
 texture_region_size = Vector2i(390, 390)
 0:0/0 = 0
+0:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_xqqjy")
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-65.5478, -60.2331, 195, -58.7053, 195, 58.7053, -65.5478, 56.69)
 1:0/0 = 0
+1:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_bjulg")
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-195, -56.69, 195, -58.7053, 195, 58.7053, -195, 58.4615)
 2:0/0 = 0
+2:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_cnio0")
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(67.1724, -58.1408, -195, -58.7053, -195, 58.7053, 66.6079, 58.1408)
 0:1/0 = 0
+0:1/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_ex6t8")
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-58.1408, -67.1724, -58.7053, 195, 58.7053, 195, 58.1408, -66.6079)
 1:1/0 = 0
+1:1/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_gd7nx")
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-61.5276, -60.3987, 195, -58.7053, 195, 60.3987, 58.7053, 58.1408, 59.2698, 195, -59.2697, 195)
 2:1/0 = 0
+2:1/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_6u4a0")
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(61.5276, -60.3987, -195, -58.7053, -195, 60.3987, -58.7053, 58.1408, -59.2698, 195, 59.2697, 195)
 0:2/0 = 0
+0:2/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_x30qc")
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-56.69, 195, -58.7053, -195, 58.7053, -195, 58.4615, 195)
 1:2/0 = 0
+1:2/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_4lnny")
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-61.5276, 60.3987, 195, 58.7053, 195, -60.3987, 58.7053, -58.1408, 59.2698, -195, -59.2697, -195)
 2:2/0 = 0
+2:2/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_oe17f")
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(61.5276, 60.3987, -195, 58.7053, -195, -60.3987, -58.7053, -58.1408, -59.2698, -195, 59.2697, -195)
 0:3/0 = 0
+0:3/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_uaeil")
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-58.1408, 67.1724, -58.7053, -195, 58.7053, -195, 58.1408, 66.6079)
 
 [sub_resource type="TileSet" id="TileSet_4602a"]
 tile_size = Vector2i(390, 390)
+occlusion_layer_0/light_mask = 1
+physics_layer_0/collision_layer = 4
+physics_layer_0/collision_mask = 11
 sources/0 = SubResource("TileSetAtlasSource_4jce7")
 
 [node name="Outside" instance=ExtResource("1_2s4ok")]
@@ -132,7 +185,7 @@ position = Vector2(520, -848)
 [node name="Player" parent="." index="5"]
 position = Vector2(598, 83)
 
-[node name="Scout" parent="Enemies" index="0" instance=ExtResource("14_xqqjy")]
+[node name="Bug" parent="Enemies" index="0" instance=ExtResource("14_xqqjy")]
 
 [connection signal="player_entered" from="Ground/House" to="." method="_on_house_player_entered"]
 [connection signal="player_left" from="Ground/House" to="." method="_on_house_player_left"]

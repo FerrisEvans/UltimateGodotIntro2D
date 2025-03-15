@@ -18,7 +18,9 @@ func _on_grenade_reload_timer_timeout() -> void:
 		can_grenade = true
 
 func hit():
-	print('damage')
+	Globals.health -= Globals.laser_dmg
+	if Globals.health <= 0:
+		print('death')
 
 func _process(_delta: float) -> void:
 	# input

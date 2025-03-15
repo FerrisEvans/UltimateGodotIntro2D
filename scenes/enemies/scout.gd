@@ -4,6 +4,8 @@ signal laser(pos, direction)
 
 var player_nearby: bool = false
 var can_laser: bool = true
+var is_hitted: bool = false
+var health = 30
 
 func _process(_delta: float) -> void:
 	if player_nearby:
@@ -26,5 +28,14 @@ func _on_attack_area_body_exited(_body: Node2D) -> void:
 func _on_laser_cool_down_timeout() -> void:
 	can_laser = true
 
+func _on_hit_interval_timeout() -> void:
+	is_hitted = false
+
 func hit():
-	print('damage')
+	if not is_hitted && $HitInterval.is_stopped():
+		health -= Globals.laser_dmg
+		$HitInterval.start()
+		is_hitted = true
+		print(health)
+	if health <= 0:
+		queue_free()

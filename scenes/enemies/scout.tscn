@@ -38,6 +38,11 @@ shape = SubResource("CircleShape2D_08kc0")
 
 [node name="LaserCoolDown" type="Timer" parent="."]
 
+[node name="HitInterval" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
 [connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]
 [connection signal="body_exited" from="AttackArea" to="." method="_on_attack_area_body_exited"]
 [connection signal="timeout" from="LaserCoolDown" to="." method="_on_laser_cool_down_timeout"]
+[connection signal="timeout" from="HitInterval" to="." method="_on_hit_interval_timeout"]
